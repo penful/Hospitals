@@ -15,11 +15,11 @@
 # quartiles of the response variable given 
 # by the ratio of the total revenues and discharges of the hospitals  
 # whose categories in each year are: 1: low, 2: medium, 3: high, 4: very high
-# nbeds: number of total beds in the ward
-# hphys: hours of activity of physicians
-# hnurses: hours of activity of nurses 
-# hothers: hours of activity of other employees
-# hsr:  hours of activity of surgery rooms
+# nbeds: number of total beds in the ward 
+# hphys: hours of activity of physicians divided by 1000
+# hnurses: hours of activity of nurses divided by 1000
+# hothers: hours of activity of other employees divided by 1000
+# hsr:  hours of activity of surgery rooms divided by 1000
 
 
 load("datalong1.Rdata")
@@ -44,7 +44,7 @@ outlm <- lmest(responsesFormula = Y ~ -1 +
              tol = 1e-1, 
              out_se = TRUE)
 summary(outlm)
-outlm$be/outlm$sebe
+
 # to select the number of states see also function lmestSearch
 
 ##### Fit Mixture latent autoregressive model ####
@@ -59,4 +59,4 @@ outar <- lmest(responsesFormula = Y ~ -1 +
               tol = 1e-1, out_se = TRUE)
 
 summary(outar)
-outar$be/outar$sebe
+
