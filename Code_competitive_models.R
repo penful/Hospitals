@@ -1,5 +1,4 @@
 #### EXAMPLE ####
-# PROVIDED BY FULVIA PENNONI #
 # Code to show the model proposed in the article: ####
 # Pennoni, F., Vittadini, G. (2013). 
 # Two competing models for ordinal longitudinal data with time-varying latent effects: 
